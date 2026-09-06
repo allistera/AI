@@ -78,6 +78,7 @@ For a direct call, use:
 The MEM0_USER_ID=allister environment variable applies to the Mem0 CLI, not the hosted MCP connector. Mem0’s hosted
 MCP setup and tool list do not document a configurable default user ID. Mem0 MCP documentation
 (https://docs.mem0.ai/platform/mem0-mcp)
+
 ### When to use Mem0
 
 Store information that is likely to be useful across future sessions or across different agents, including:
@@ -122,16 +123,14 @@ Instead of:
 
 Include relevant identifiers such as service names, package names, directories, issue numbers, or architecture components where they improve retrieval.
 
-### What not to store
+### What to store
+- User preferences (Stated likes, dislikes, and working style)
+- Key facts and context (Important information shared by the user)
+- Ongoing tasks (Active work, projects, and follow-ups)
 
-Do not use Mem0 for:
-          * Temporary debugging output.
-* Routine progress updates.
-* Information already obvious from the source code.
-* Large code snippets.
-* Build logs or command output.
-* Secrets, credentials, API keys, tokens, certificates, or other sensitive information.
-* Speculation that has not been validated.
+### What not to store
+- Sensitive data (Credentials, tokens, and PII)
+- Filler conversation (Generic chit-chat and pleasantries)
 
 ### Updating memory
 
